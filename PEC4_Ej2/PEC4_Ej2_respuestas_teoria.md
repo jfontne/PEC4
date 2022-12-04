@@ -23,7 +23,7 @@ Aquí se definen las propiedades o reglas que utilizarà nuestro editor de códi
 ![editorconfig](img/editorConfig.jpg)
 
 ### .gitignore
-En este fichero podemos definir que carpetas/archivos o queremos sincronizar con el repositorio **github**
+En este fichero podemos definir que carpetas/archivos queremos ignorar con el repositorio **github**
 
 ![gitignore](img/gitignore.jpg)
 
