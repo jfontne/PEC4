@@ -1,0 +1,43 @@
+.container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.vino{
+    text-align: center;
+    border: 1px solid #999999;
+    border-radius: 10px;
+    width: 250px;
+    padding: 0.5%;
+}
+
+.preu{
+    font-weight: bold;
+    font-size: 18px;
+}
+.enVenda{
+    background-color: aquamarine;
+}
+.noDisponible{
+    background-color: #cccccc;
+}
+.unitsContainer{
+    width: 95%;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.units{
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: medium;
+}
+.miniatura{
+    width: 95%;
+    border-radius: 10px;
+}
+button{
+    width: 25%;
+    font-size: 18px;
+}
