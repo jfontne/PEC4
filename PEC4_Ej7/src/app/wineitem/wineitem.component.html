@@ -4,7 +4,7 @@
     *ngIf="wine!==null">
         <img class="miniatura" src="{{'assets/img/' + wine.imageUrl}}" alt='{{wine.name}}'>
         <h2>{{wine.name}}</h2>
-        <p class="preu">Price: {{wine.price}}</p>
+        <p class="preu">Price: {{wine.price.toFixed(2)}}</p>
         <div class="unitsContainer">
             <button 
             (click)="subtractQuantity()"
@@ -19,5 +19,6 @@
             <!-- <p class="units" >{{wine.quantityInCart}}</p> -->
             <button (click)="addQuantity()">+</button>
         </div>   
+        <div class="total">TOTAL: {{total.toFixed(2)}}</div>
     </div>
 </div>

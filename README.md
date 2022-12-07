@@ -19,3 +19,8 @@ https://es.stackoverflow.com/questions/322171/error-con-input-angular
 
 * Aquí l'explicació 
   https://www.angularjswiki.com/angular/ngmodelchange-change-angular/
+
+# Rebre un missatge del component fill
+
+https://www.youtube.com/watch?v=KoldgzTuM1s
+

@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Wine } from '../models/wine';
+
 @Component({
   selector: 'app-wineitem',
   templateUrl: './wineitem.component.html',
@@ -9,10 +10,19 @@ export class WineitemComponent{
   
   public wineClasses;
   public serieNumerica: Array<number>;
-
-  @Input() wine: Wine | null=null;
+  public total: number;
+  @Input() wine: Wine;
 
   constructor(){
+    this.wine = {
+      name: '',
+      imageUrl: '',
+      price: 0,
+      quantityInCart: 0,
+      isOnSale: false,
+      foodPairing: []
+    }
+    this.total = 0;
     this.wineClasses = {};    
     this.serieNumerica = [];
     this.serieNumerica = Array(20).fill(0).map((x,index) => index); 
@@ -28,14 +38,15 @@ export class WineitemComponent{
 
   addQuantity(){
     if(this.wine) this.wine.quantityInCart++;
+    this.total = this.wine.quantityInCart * this.wine.price;
   }
   subtractQuantity(){
-
-    if(this.wine) this.wine.quantityInCart = this.wine.quantityInCart===0? 0 : this.wine.quantityInCart - 1;
-  }
+      if(this.wine) this.wine.quantityInCart = this.wine.quantityInCart===0? 0 : this.wine.quantityInCart - 1;
+      this.total = this.wine.quantityInCart * this.wine.price;
+    }
   updateQuantityInCard(c: Event){
     if(this.wine) this.wine.quantityInCart = Number(c);
-    console.log(c);
+    this.total = this.wine.quantityInCart * this.wine.price;
   }
-
+  
 }
