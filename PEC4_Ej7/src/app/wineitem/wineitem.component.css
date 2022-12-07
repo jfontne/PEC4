@@ -4,6 +4,7 @@
     flex-wrap: wrap;
 }
 .vino{
+    margin: 10px;
     text-align: center;
     border: 1px solid #999999;
     border-radius: 10px;
@@ -34,8 +35,9 @@
     font-size: medium;
 }
 .miniatura{
-    width: 95%;
-    border-radius: 10px;
+    padding: 10px;
+    height: 150px;
+    border-radius: 20px;
 }
 button{
     width: 25%;
