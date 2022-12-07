@@ -11,6 +11,8 @@
 # La variable no reconoce los valores del @input
 si volem accedir a un valor que ve donat per un input l'hem de cridar des d' **ngOnInit()**, si ho fem des del contructor la variable sempre donarà el valor inicial, en el nostre cas ***null***.
 
+![ngOnInit](PEC4_Ej7/img/ngOnInit.jpg)
+
 https://es.stackoverflow.com/questions/322171/error-con-input-angular
 
 
