@@ -15,3 +15,18 @@ La opción **trackBy** nos permite identificar cada uno de los elementos de un b
 
 # ¿Es posible ejecutar dos directivas estructurales simultáneamente? Explica la razón tanto si es si posible como si no lo es.
 
+No es posible, ya que cada directiva hace una acción directa sobre un elemento DOM, no depende de otras directivas.
+
+por ejemplo **'*ngIf'** puede crear un elemento DOM o no crearlo
+
+~~~~
+<div *ngIf="condicion">Mostra aquest contingut si és verdader</div> 
+~~~~
+
+Ahora vamos a ver otra directiva la **'ngFor** que genera un bucle donde se van creando tantos elementos como tendrá el bucle
+
+~~~~
+<div *ngFor="let elemento of elementos">contenido {{elemento}} del bucle</div>
+~~~~
+
+Ahora si queremos juntar estas dos directivas tendremos problemas, por ejemplo un **'ngIf'** donde la condición sea *falsa* y seguido de un bucle **'ngFor'** que intentarà realizar un bucle de un elemento que no se va a crear.
