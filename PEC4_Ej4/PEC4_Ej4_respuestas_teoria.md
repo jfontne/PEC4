@@ -23,7 +23,7 @@ por ejemplo **'*ngIf'** puede crear un elemento DOM o no crearlo
 <div *ngIf="condicion">Mostra aquest contingut si és verdader</div> 
 ~~~~
 
-Ahora vamos a ver otra directiva la **'ngFor** que genera un bucle donde se van creando tantos elementos como tendrá el bucle
+Ahora vamos a ver otra directiva la **'ngFor'** que genera un bucle donde se van creando tantos elementos como tendrá el bucle
 
 ~~~~
 <div *ngFor="let elemento of elementos">contenido {{elemento}} del bucle</div>

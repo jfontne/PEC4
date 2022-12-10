@@ -1,5 +1,9 @@
 # PEC 4 - Front-End
 
+## Datos Alumno
+* jfontne
+* Jordi Font Nebot
+
 ## PEC4_Ej1 - Instalación y configuración de Angular CLI
 
 [Explicació](PEC4_Ej1/PEC4_Ej1_respuestas_teoria.md)

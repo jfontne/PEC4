@@ -34,7 +34,7 @@ Aquí vemos un fragmento de código del tipoProducto
 ![codigo enum](img/enum2.jpg)
 
 ### ng generate guard
-Los **guard** sirven para definir si se puede o no acceder a alguna ruta, como por ejemplo si el usurio tiene o no permisos.
+Los **guard** sirven para definir si se puede o no acceder a alguna ruta, como por ejemplo si el usuario tiene o no permisos.
 ~~~~
 ng generate guard guards/vigilancia
 ~~~~
@@ -47,7 +47,7 @@ El código inicial de la clase
 ![codigo inicial guard](img/guards2.jpg)
 
 ### ng generate interface
-Genera un nuevo interface, donde podemos definir una estructura como si fuera una clase pero sin implementar los métodso, sólo la estructura. Esto nos permite crear una plantilla que luego se puede heredar en diferentes clases.
+Genera un nuevo interface, donde podemos definir una estructura como si fuera una clase pero sin implementar los métodos, sólo la estructura. Esto nos permite crear una plantilla que luego se puede heredar en diferentes clases.
 
 ~~~~
 ng generate interface interfaces/producte
@@ -93,7 +93,7 @@ ng serve
 
 ![ng serve](img/ngserve.jpg)
 
-Això veurem pel navegador
+Esto veuremos en el navegador
 
 ![ng serve resultat](img/ngserve2.jpg)
 

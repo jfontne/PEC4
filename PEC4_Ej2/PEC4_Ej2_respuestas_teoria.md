@@ -66,7 +66,7 @@ En la carpeta **environments** tenemos los archivos de configuración del estado
 
 ## Directorio assets
 
-El directorio assets és como una carpeta pública donde podemos acceder desde cualquier componente, por ejemplo, una carpeta de imágenes donde podemos direccionar nuestras imágenes, videos, esta información se quedaá inamovible quando compilemos.
+El directorio assets és como una carpeta pública donde podemos acceder desde cualquier componente, por ejemplo, una carpeta de imágenes donde podemos direccionar nuestras imágenes, videos, esta información se quedará inamovible cuando compilemos.
 
 ## Directorio app
 El directorio app és donde se aloja nuestra aplicación y sus componentes.
