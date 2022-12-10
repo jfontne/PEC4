@@ -10,15 +10,9 @@
             (click)="subtractQuantity()"
             *ngIf="wine.quantityInCart>0"
             >-</button>
-            <select id="unitsCard" class="units" value="{{wine.quantityInCart}}" 
-            [ngModel]="wine.quantityInCart"
-            (ngModelChange)="updateQuantityInCard($event)">
-                <option 
-                *ngFor="let i of serieNumerica">{{i + 1}}</option>
-            </select>
-            <!-- <p class="units" >{{wine.quantityInCart}}</p> -->
+            <p class="units" >{{wine.quantityInCart}}</p>
             <button (click)="addQuantity()">+</button>
         </div>   
-        <div class="total">TOTAL: {{total.toFixed(2)}}</div>
+        <div class="total">TOTAL: {{wine.total.toFixed(2)}}</div>
     </div>
 </div>

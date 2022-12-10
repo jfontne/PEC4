@@ -8,5 +8,6 @@ export class Wine {
         public price: number, 
         public isOnSale: boolean, 
         public quantityInCart: number, 
+        public total: number,
         public foodPairing: Food[]){}
 }

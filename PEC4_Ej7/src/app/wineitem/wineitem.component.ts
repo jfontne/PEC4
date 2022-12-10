@@ -12,7 +12,6 @@ export class WineitemComponent{
   public wineClasses;
   public wineQuantity: WineQuantityChange;
   public serieNumerica: Array<number>;
-  public total: number;
   @Input() wine: Wine;
   @Output() addEvento = new EventEmitter<WineQuantityChange>
   @Output() substractEvento = new EventEmitter<WineQuantityChange>
@@ -30,9 +29,9 @@ export class WineitemComponent{
       price: 0,
       quantityInCart: 0,
       isOnSale: false,
+      total: 0,
       foodPairing: []
     }
-    this.total = 0;
     this.wineClasses = {};    
     this.serieNumerica = [];
     this.serieNumerica = Array(20).fill(0).map((x,index) => index); 
@@ -54,9 +53,9 @@ export class WineitemComponent{
       this.wineQuantity.id = this.wine.id;
       this.substractEvento.emit(this.wineQuantity);
   }
-  updateQuantityInCard(c: Event){
-    if(this.wine) this.wine.quantityInCart = Number(c);
-    this.total = this.wine.quantityInCart * this.wine.price;
-  }
+  // updateQuantityInCard(c: Event){
+  //   if(this.wine) this.wine.quantityInCart = Number(c);
+  //   this.total = this.wine.quantityInCart * this.wine.price;
+  // }
   
 }
