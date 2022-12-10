@@ -10,9 +10,11 @@ import { WineQuantityChange } from '../interfaces/wine-quantity-change';
 })
 export class WinelistComponent {
   public winelist: Wine[];
+  public totalComanda: string;
 
   
   constructor(){
+  this.totalComanda = '';  
   let foods: Food[]= [];
     foods = [
       {
@@ -41,7 +43,7 @@ export class WinelistComponent {
     i = ids.indexOf(e.id);
     this.winelist[i].quantityInCart++;  
     this.winelist[i].total = this.winelist[i].quantityInCart * this.winelist[i].price;  
-
+    this.totalComanda = this.actualitzaTotalComanda().toFixed(2);
     console.log(this.winelist[i]);
   }
   substractGetWine(e:WineQuantityChange){
@@ -51,8 +53,15 @@ export class WinelistComponent {
     i = ids.indexOf(e.id);
     this.winelist[i].quantityInCart--;
     this.winelist[i].total = this.winelist[i].quantityInCart * this.winelist[i].price;  
-
+    this.totalComanda = this.actualitzaTotalComanda().toFixed(2);
     console.log(this.winelist[i]);
   }
-
+  actualitzaTotalComanda(){
+    let total: number = 0;
+    let llista: Wine;
+    this.winelist.forEach(wine =>{
+      total = total + wine.total
+    });
+    return total;
+  }
 }
