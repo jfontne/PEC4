@@ -1,4 +1,8 @@
-# Apunts
+# Resultat exercici 7
+
+![resultat exercici 7](img/resultatExercici7.jpg)
+
+# Apunts (anotacions)
 * Volem vincular un component **wineList** amb el component **wineItem** per fer-ho des de el component fill **wineItem** haurem d'incloure a les variables del pare  **wineList** per fer-ho ho farem de la següent manera:
 
 ![Vincular components](img/passarVariableComponentPareAComponentFill.jpg)
