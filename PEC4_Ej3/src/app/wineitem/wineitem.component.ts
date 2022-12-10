@@ -8,11 +8,13 @@ import { Food } from '../interfaces/food';
   styleUrls: ['./wineitem.component.css']
 })
 export class WineitemComponent{
+
+  //Anem a declarar una variable del tipus de la classe Wine
   wine: Wine;
   
 
   constructor(){
-    
+    //En el contructor donem d'alta els valors inicials de les variables
     let foods: Food[]= [];
     let food: Food;
     food = {
@@ -33,7 +35,7 @@ export class WineitemComponent{
 
     this.wine = new Wine('Alta Alella LAIETÀ - Gran Reserva',
                 '03_alta_alella_mirgin_laieta_gran_reserva_t_21.jpg',
-                20.20, false, 0, foods);
+                20.20, true, 0, foods);
   }
   addQuantity(){
     this.wine.quantityInCart++;

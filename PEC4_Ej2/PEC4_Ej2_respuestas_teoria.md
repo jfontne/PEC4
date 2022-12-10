@@ -51,26 +51,50 @@ la hoja de estilos global de nuestra aplicación, se aplicarà por defecto a tod
 
 ### test.ts
 
+Aquí se ejecutant las comprobaciones de los test de desarrollo.
+
 
 ### polyfills.ts
 
+Polyfillsen angular hay algunas líneas de código para hacer compatible el código generado por angular con navegadores más antiguos, como IE, firefox versiones antiguas.
+
 ## Directorio environments
+
+En la carpeta **environments** tenemos los archivos de configuración del estado de nuestra aplicación, existen principalmente dos estados:
+* Desarrollo: Donde estamos desarrollando nuestra aplicación, donde hay archivos de test y otros complementos necesarios para testear nuestra aplicación.
+* Producción: Cuando ya tenemos nuestra aplicación finalizada y la vamos a colgar en el servidor definitivo.
 
 ## Directorio assets
 
+El directorio assets és como una carpeta pública donde podemos acceder desde cualquier componente, por ejemplo, una carpeta de imágenes donde podemos direccionar nuestras imágenes, videos, esta información se quedaá inamovible quando compilemos.
+
 ## Directorio app
+El directorio app és donde se aloja nuestra aplicación y sus componentes.
 
 ### Ficheros app.component.*
+Un componente és una parte de nuestra aplicación, que està bàsicamente compuesta de un fichero html, uno ts y uno css.
 
 ### Fichero app.module.ts
+Aquí és donce se definen que componentes hay en nuestra aplicación, cual es el archivo principal para arrancar nuestra aplicación, etc.
 
 # Explica cada uno de los siguientes decoradores generados por Angular CLI, detallando cada una de las propiedades que se definen en:
 
 ## app.module.ts - @NgModule (declarations, imports, providers, bootstrap).
 
+* declarations: Que componentes forman parte de nuestra aplicación.
+* imports: sirve para importar otros módulos que vamos a utilizar.
+* providers: sirve para importar servicios de datos, para manejar datos de base de datos.
+* bootstrap: la vista o componente principal de nuestra aplicación.
+
 ## app.component.ts - @Component (selector, templateUrl, styleUrls).
 
+* selector: Es la etiqueta html que activarà toda la lógica del componente.
+* templateUrl: Es el fichero html asociado a la vista html.
+* styleUrls: Es la hoja de estilos utilizada por el componente.
+
 # ¿Es posible poder inyectar el template y los estilos en línea de un componente sin necesidad de especificarlos en templateUrl, styleUrls? ¿Es recomendable hacer esto?
+
+Si es posible, pero no recomendable, debido a que queda poco claro y estructurado el codigo, mucho mejor para el mantenimiento de una aplicación que todo el código esté en ficheros separados para su reutilización y mantenimiento.
 
 
 
