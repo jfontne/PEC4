@@ -4,6 +4,10 @@
 </div>
 <div class="llistaVins">
     <div *ngFor="let vi of winelist">
-        <app-wineitem (addEvento)="addGetWine($event)" (substractEvento)="substractGetWine($event)" [wine] = "vi"></app-wineitem>
+        <app-wineitem 
+            (addEvento)="addGetWine($event)" 
+            (substractEvento)="substractGetWine($event)" 
+            [wine] = "vi">
+        </app-wineitem>
     </div>
 </div>

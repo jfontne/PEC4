@@ -44,7 +44,6 @@ export class WinelistComponent {
     this.winelist[i].quantityInCart++;  
     this.winelist[i].total = this.winelist[i].quantityInCart * this.winelist[i].price;  
     this.totalComanda = this.actualitzaTotalComanda().toFixed(2);
-    console.log(this.winelist[i]);
   }
   substractGetWine(e:WineQuantityChange){
     let i: number;
@@ -54,7 +53,6 @@ export class WinelistComponent {
     this.winelist[i].quantityInCart--;
     this.winelist[i].total = this.winelist[i].quantityInCart * this.winelist[i].price;  
     this.totalComanda = this.actualitzaTotalComanda().toFixed(2);
-    console.log(this.winelist[i]);
   }
   actualitzaTotalComanda(){
     let total: number = 0;

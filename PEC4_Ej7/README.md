@@ -15,6 +15,12 @@ si volem accedir a un valor que ve donat per un input l'hem de cridar des d' **n
 
 https://es.stackoverflow.com/questions/322171/error-con-input-angular
 
+# Rebre informació del component fill
+
+Aquí volem passar dades del fill al pare, per fer-ho hem de crear un emisor d'event produït al fill i passar-li la info al pare.
+
+![fillApare](img/fillApare.jpg)
+
 
 # Vincular un control a una variable
 
@@ -22,7 +28,4 @@ https://es.stackoverflow.com/questions/322171/error-con-input-angular
 * Aquí l'explicació 
   https://www.angularjswiki.com/angular/ngmodelchange-change-angular/
 
-# Rebre un missatge del component fill
-
-https://www.youtube.com/watch?v=KoldgzTuM1s
 
