@@ -1,27 +1,28 @@
-# PEC4Ej3
+# Apunts
+* Volem vincular un component **wineList** amb el component **wineItem** per fer-ho des de el component fill **wineItem** haurem d'incloure a les variables del pare  **wineList** per fer-ho ho farem de la següent manera:
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.1.
+![Vincular components](PEC4_Ej7/img/passarVariableComponentPareAComponentFill.jpg)
 
-## Development server
+* Aquí una explicació detallada https://www.youtube.com/watch?v=7Y1KpLbMTJw
+* També és important el tractament dels 'nulls' dins del fitxer HTML del component fill, en aquest cas la fitxa del vi 'wineitem'
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+![tractament null](PEC4_Ej7/img/objectNULL.jpg)
 
-## Code scaffolding
+# La variable no reconoce los valores del @input
+si volem accedir a un valor que ve donat per un input l'hem de cridar des d' **ngOnInit()**, si ho fem des del contructor la variable sempre donarà el valor inicial, en el nostre cas ***null***.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+![ngOnInit](PEC4_Ej7/img/ngOnInit.jpg)
 
-## Build
+https://es.stackoverflow.com/questions/322171/error-con-input-angular
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Running unit tests
+# Vincular un control a una variable
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
+* Aquí l'explicació 
+  https://www.angularjswiki.com/angular/ngmodelchange-change-angular/
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+# Rebre un missatge del component fill
 
-## Further help
+https://www.youtube.com/watch?v=KoldgzTuM1s
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.

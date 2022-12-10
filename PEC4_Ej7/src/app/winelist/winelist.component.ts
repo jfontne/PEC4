@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Wine } from '../models/wine';
 import { Food } from '../interfaces/food';
+import { WineQuantityChange } from '../interfaces/wine-quantity-change';
 
 @Component({
   selector: 'app-winelist',
@@ -10,7 +11,7 @@ import { Food } from '../interfaces/food';
 export class WinelistComponent {
   public winelist: Wine[];
 
-
+  
   constructor(){
   let foods: Food[]= [];
     foods = [
@@ -27,10 +28,27 @@ export class WinelistComponent {
         vegan: false}
       ]  
       this.winelist = [
-      new Wine('Alta Alella LAIETÀ Gran Reserva','03_alta_alella_mirgin_laieta_gran_reserva_t_21.jpg',20.20,true,0,foods),
-      new Wine('Alta Alella LAIETÀ Rosé Gran Reserva','04_alta_alella_mirgin_laieta_rose_gran_reserva_t_22.jpg',21.85,true,0,foods),
-      new Wine('Alta Alella MIRGIN Gran Reserva','02_alta_alella_mirgin_gran_reserva_elaborador_t.jpg',12.95,false,0,foods),
-      new Wine('Alta Alella MIRGIN OPUS Paratge','05_alta_alella_mirgin_opus_paratge_qualificat_vallcirera_t_22.jpg',32.00,true,0,foods)
+      new Wine(1,'Alta Alella LAIETÀ Gran Reserva','03_alta_alella_mirgin_laieta_gran_reserva_t_21.jpg',20.20,true,0,foods),
+      new Wine(2,'Alta Alella LAIETÀ Rosé Gran Reserva','04_alta_alella_mirgin_laieta_rose_gran_reserva_t_22.jpg',21.85,true,0,foods),
+      new Wine(3,'Alta Alella MIRGIN Gran Reserva','02_alta_alella_mirgin_gran_reserva_elaborador_t.jpg',12.95,false,0,foods),
+      new Wine(4,'Alta Alella MIRGIN OPUS Paratge','05_alta_alella_mirgin_opus_paratge_qualificat_vallcirera_t_22.jpg',32.00,true,0,foods)
     ]
   }
+  addGetWine(e:WineQuantityChange){
+    let i: number;
+    let ids: Array<number>;
+    ids = this.winelist.map(x => x.id);
+    i = ids.indexOf(e.id);
+    this.winelist[i].quantityInCart++;  
+    console.log(this.winelist[i]);
+  }
+  substractGetWine(e:WineQuantityChange){
+    let i: number;
+    let ids: Array<number>;
+    ids = this.winelist.map(x => x.id);
+    i = ids.indexOf(e.id);
+    this.winelist[i].quantityInCart--;  
+    console.log(this.winelist[i]);
+  }
+
 }

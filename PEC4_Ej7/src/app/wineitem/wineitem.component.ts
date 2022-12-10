@@ -1,5 +1,6 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Wine } from '../models/wine';
+import { WineQuantityChange } from '../interfaces/wine-quantity-change';
 
 @Component({
   selector: 'app-wineitem',
@@ -9,12 +10,21 @@ import { Wine } from '../models/wine';
 export class WineitemComponent{
   
   public wineClasses;
+  public wineQuantity: WineQuantityChange;
   public serieNumerica: Array<number>;
   public total: number;
   @Input() wine: Wine;
+  @Output() addEvento = new EventEmitter<WineQuantityChange>
+  @Output() substractEvento = new EventEmitter<WineQuantityChange>
 
   constructor(){
+    this.wineQuantity = {
+      id: 0,
+      quantity: 0
+    }
+
     this.wine = {
+      id: 0,
       name: '',
       imageUrl: '',
       price: 0,
@@ -37,13 +47,13 @@ export class WineitemComponent{
   }
 
   addQuantity(){
-    if(this.wine) this.wine.quantityInCart++;
-    this.total = this.wine.quantityInCart * this.wine.price;
+      this.wineQuantity.id = this.wine.id;
+      this.addEvento.emit(this.wineQuantity);
   }
   subtractQuantity(){
-      if(this.wine) this.wine.quantityInCart = this.wine.quantityInCart===0? 0 : this.wine.quantityInCart - 1;
-      this.total = this.wine.quantityInCart * this.wine.price;
-    }
+      this.wineQuantity.id = this.wine.id;
+      this.substractEvento.emit(this.wineQuantity);
+  }
   updateQuantityInCard(c: Event){
     if(this.wine) this.wine.quantityInCart = Number(c);
     this.total = this.wine.quantityInCart * this.wine.price;
